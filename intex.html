@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLTS - Inserta el código</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    .hidden-username {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+      color: #3a3a3a;
+      margin-top: 20px;
+    }
+    .input-field {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¡Bienvenido a MLTS, inserta el código!</h1>
+  
+  <input type="text" id="codigo" class="input-field" placeholder="Inserta el código" />
+  <button class="btn" onclick="verificarCodigo()">Comprobar</button>
+  
+  <p id="username" class="hidden-username">El nombre de usuario es: <strong>X@MisTeRi0</strong></p>
+
+  <script>
+    function verificarCodigo() {
+      var codigo = document.getElementById("codigo").value.trim();
+
+      // Compara el código con el valor correcto
+      if (codigo === "iamagoodperson") {
+        document.getElementById("username").style.display = "block";  // Muestra el nombre de usuario
+      } else {
+        alert("Código incorrecto. Intenta nuevamente.");
+      }
+    }
+  </script>
+
+</body>
+</html>
